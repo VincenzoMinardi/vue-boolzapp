@@ -171,12 +171,12 @@ const boolZapp = Vue.createApp({
                     ],
                 }
             ]
-            
-            
-            
-            
         }
+        
     }
+
+   
+
 });
 
 boolZapp.mount('#app')

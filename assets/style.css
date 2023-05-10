@@ -24,7 +24,7 @@ body {
 
 .bar-user{
     
-    height: 100%;
+    height: 95vh;
     width: 30%;
     background-color: white;
 }
@@ -32,7 +32,7 @@ body {
 
 .bar-chat{
     background-image: url(../img/mine.jpg);
-    height: 100%;
+    height: 95vh;
     width: 70%;
 }
 
@@ -135,10 +135,18 @@ input{
 .img-profile{
     height: 100%;
     width: 60px;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     border-radius: 3rem;
 }
 
-.friends{
+.scroll{
     overflow-y: scroll;
+    height: 81%;
+    
+}
+
+.date{
+    font-size: 1rem;
+    position: relative;
+    bottom: 35px;
 }
