@@ -16,12 +16,36 @@
     
     <div id="app">
         <div class="bar-user">
-            <div class="user"></div>
-        </div>
+            <div class="user">
+                <div>
+                    <img class="img" :src="user.avatar">
+                    <span class="name">{{user.name}}</span>
+                </div>
+                <div>
+                    <i class=" icon1 fa-solid fa-spinner" style="color: #828282;"></i>
+                    <i class=" icon2 fa-solid fa-message" style="color: #828282;"></i>
+                    <i class=" icon3 fa-solid fa-ellipsis-vertical" style="color: #828282;"></i>
+                </div>
+            </div>
+            <div class="bar-notifications">
+                <i class="icon-bell fa-solid fa-bell-slash" style="color: #ffffff;"></i>
+                <span>Ricevi notifiche di nuovi messaggi</span>
+                <div class="link"> 
+                    <a href="#">Attiva notifiche desktop</a>
+                </div>
+            </div>
+            <div class="search">
+                <input type="text"  placeholder="Cerca o inizia una nuova chat">
+            </div>
+            <div v-for="(element, index) in  contacts" class="friends">
+            <img :src="contacts.avatar">
+            
+            </div>
+       </div>
         <div class="bar-chat">
-        <div class="nav-bar"></div>
             <div class="bar-text">
-                <div class="colo-bar-text">
+                <div class="nav-bar"></div>
+                <div class="color-bar-text">
                     <i class=" emoticon fa-solid fa-face-smile" style="color: #a0a2a6;"></i>
                     <input class="text" type="text" placeholder="Scrivi un messaggio">
                     <i class=" emoticon-2 fa-solid fa-microphone" style="color: #919397;"></i>
