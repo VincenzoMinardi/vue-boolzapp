@@ -43,7 +43,7 @@
                 <div v-for="(element,index) in contacts" class="friends">
                     <img class="img-profile" :src="element.avatar">
                     <span>{{element.name}}</span>
-                    <div class="date">{{element.messages[0].message}}</div>
+                    <div class="date">{{element.messages[element.messages.length - 1].message}}</div>
                 </div>
             </div>
            
