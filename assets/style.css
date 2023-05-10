@@ -92,6 +92,7 @@ body {
 
 .img{
     height: 100%;
+    border-radius: 3rem;
 }
 
 .icon{
