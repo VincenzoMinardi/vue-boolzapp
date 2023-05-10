@@ -129,4 +129,15 @@ input{
     width: 100%;
     border: 1 px solid grey;
    
-} 
+}
+
+.img-profile{
+    height: 100%;
+    width: 60px;
+    margin-bottom: 1rem;
+    border-radius: 3rem;
+}
+
+.friends{
+    overflow-y: scroll;
+}

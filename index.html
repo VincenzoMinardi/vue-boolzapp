@@ -38,7 +38,11 @@
                 <input type="text"  placeholder="Cerca o inizia una nuova chat">
             </div>
             <div v-for="(element, index) in  contacts" class="friends">
-            <img :src="contacts.avatar">
+            <img class="img-profile" :src="element.avatar">
+            <span>{{element.name}}</span>
+            <div>{{element.messages.date}}</div>
+           
+            
             
             </div>
        </div>
