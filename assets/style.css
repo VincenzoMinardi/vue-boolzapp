@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: linear-gradient(
+        to bottom,
+        #009688 20%,
+        #D8DBD5 20%
+    );
+}
+
+#app{
+    display: flex;
+    height: 90%;
+    width: 70%;
+    background-color: white;
+}
+
+.bar-user{
+    height: 100%;
+    width: 30%;
+    background-color: white;
+}
+   
+
+.bar-chat{
+    background-color: #E3DBD3;
+    height: 100%;
+    width: 70%;
+    
+    
+}
