@@ -204,9 +204,17 @@ body {
 
 .chat.received{
     align-self: flex-end;
-    background-color: green;
+   background-color: rgb(213, 249, 186);
     padding: 2rem;
     width: 250px;
     height: 105px;
     border-radius: 2rem;
+}
+
+
+.chat_users:hover{
+
+    background-color: grey;
+    opacity: 60%;
+
 }
