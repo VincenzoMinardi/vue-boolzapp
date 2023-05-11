@@ -1,11 +1,10 @@
-*{
-    margin: 0;
+* {
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
 body {
-    
     display: grid;
     place-items: center;
     height: 100vh;
@@ -16,170 +15,160 @@ body {
     );
 }
 
-#app{
-    display: flex;
+#app {
     height: 90%;
     width: 70%;
     background-color: white;
-}
-
-.bar-user{
-    
-    height: 100%;
-    width: 30%;
-    background-color: white;
-}
-   
-
-.bar-chat{
-    background-image: url(../img/mine.jpg);
-    height: 80%;
-    width: 70%;
-}
-
-.bar-text{
-   display: flex;
-   flex-direction: column;
-    
-}
- 
-.text{
-   
-    border: none;
-    border-radius: 1rem;
-    width: 800px;
-    height: 40px;
-    margin-left: 1rem;
-    
-}
-
-.emoticon{
-    
-    font-size: 1.5rem;
-    margin-left: 1.5rem;
-   
- 
-}
-
-.color-bar-text{
-  display: flex;
- 
-  
-    
-}
-.emoticon-2{
-   font-size: 1.5rem;
-   margin-left: 1rem;
-   
-    
-}
-
-.user{
     display: flex;
-    justify-content: space-between;
-    height: 70px;
-    background-color: #EAEAEA;
+    margin: auto;
     
 }
 
- .nav-bar{
-    background-color: #EAEAEA;
-   height: 70px;
-} 
-
-.img-size{
+.user_bar {
     height: 100%;
-    width: 30%;
+    width: 35%;
 }
 
-.img{
-    height: 100%;
-    border-radius: 3rem;
+.user {
+    display: flex;
+    align-items: center;
+    padding-inline: 1rem;
+    padding: .3rem;
+    justify-content: space-between;
+    background-color: #eaeaea;
+    height: 8%;
+}
+.user img {
+    width: 60px;
+    display: block;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+
 }
 
-.icon{
-    margin-right: 2rem;
+.emoticon i {
+    padding-inline: 5px;
+    color: gray;
+}
+
+.chat_bar {
+    background-image: url(img/mine.jpg);
+    height: 100%;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+.notification {
+    background-color: #8EDAFC;
+    height: 7%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.txt {
+    font-size: .7rem;
+    padding-left: 2rem;
+}
+
+.bell {
+    padding-left: 1rem;
+}
+.scroll {
+    overflow-y: scroll;
+    height: 79%;
+}
+.chat_users{
+    display: flex;
+    padding-bottom: .4rem;
+}
+.img_avatar {
+    display: flex;
+    padding: .4rem;
+}
+
+.img_avatar img {
+    width: 20%;
+    border-radius: 50%;
+}
+
+.txt_avatar {
+    padding-top: .3rem;
+    display: flex;
+    position: relative;
+    width: 70%;
+    
+}
+
+.name {
+    font-size: 1rem;
+    padding-left: 1rem;
+}
+.date{
+    width: 10%;
+    font-size: .5rem;
+}
+.last_msg{
+    font-size: .7rem;
+    position: absolute;
+    bottom: 0;
+    padding-left: 1rem;
+}
+.chat_head{
+    height: 8%;
+    background-color: #eaeaea;
+    border-left: 1px solid rgb(27, 27, 27);
+}
+.msg {
+    background-image: url(../img/mine.jpg);
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.msg .chat {
+    max-width: 60%;
+    border-radius: 5px;
+    margin: 1rem;
+}
+
+.msg .green {
+    background-color: #4af805b9;
+    align-self: end;
+}
+
+.msg .white {
+    background-color: white;
+    align-self: start;
+}
+.chat .chat_text {
+    padding: .8em;
+    font-size: .8rem;
+}
+
+.chat .chat_text .chat_date {
+    font-size: .6rem;
+}
+.controls {
+    background-color: #eaeaea;
+    height: 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.controls i {
     padding-inline: 1rem;
 }
 
-
-.icon1, .icon2, .icon3{
-    margin-top: .5rem;
-   padding-inline: .5rem;
+.controls input {
+    width: 80%;
+    height: 60%;
+    border-radius: 10px;
 }
-
-.bar-notifications{
-   
-    height: 70px;
-    width: 100%;
-    background-color:rgb(142, 218, 252);
-}
-
-.icon-bell{
-    margin-top: 1rem;
-    font-size: 2rem;
-}
-
-span{
-    margin-left: 1rem;
-}
-
-.link{
-    margin-left: 3.5rem;
-}
-
-input{
-    width: 100%;
-    border: 1 px solid grey;
-   
-}
-
-.img-profile{
-    height: 100%;
-    width: 60px;
-    margin-bottom: 3rem;
-    border-radius: 3rem;
-}
-
-.scroll{
-    overflow-y: scroll;
-    height: 81%;
-    
-}
-
-.date{
-    font-size: 1rem;
-    position: relative;
-    bottom: 35px;
-}
-
-.messages{
-    display: flex;
-    justify-content: space-around;
-}
-
-.ms-utent{
-    height: 50px;
-    width: 250px;
-    background-color: white;
-    margin-top: 20rem;
-    border-radius: 1rem;
-   
-}
-
-.ms-user{
-    background-color: rgb(213, 249, 186);
-    height: 50px;
-    width: 250px;
-    margin-top: 3rem;
-    border-radius: 1rem;
-}
-
-
-.ms-user1{
-    background-color: rgb(213, 249, 186);
-    height: 50px;
-    width: 250px;
-    margin-top: 10rem;
-    border-radius: 1rem;
+.input-group{
+    height: 6%;
 }
