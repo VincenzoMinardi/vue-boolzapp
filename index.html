@@ -38,7 +38,7 @@
                 <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat">
             </div>
             <div class="scroll">
-                <div class="chat_users" v-for="(element, index) in contacts" :key="index">
+                <div @click="selectUser(index)" class="chat_users" v-for="(element, index) in contacts" :key="index">
                     <div class="img_avatar">
                         <img :src="element.avatar" alt="">
                         <div class="txt_avatar">
@@ -68,21 +68,12 @@
             </div>
            
             <div class="msg">
-                <div class="chat white">
-                    <div class="chat_text">
-                        <div class="chat_date">
-                           
-                            10/01/2020 15:30:55
-                        </div>
-                    </div>
-                </div>
-                <div v-for="element in contacts[0].messages" class="chat green">
-                    <div class="chat_text">
-                        {{element.message}}
-                        <div class="chat_date">
-                            10/01/2020 15:30:55
-                        </div>
-                    </div>
+                <div class="chat"
+                v-for="eleMessage in contacts[activeIndex].messages"
+                :key="eleMessage.date"
+                :class="eleMessage.status == 'sent' ? 'sent' : 'received'"
+                >
+                {{eleMessage.message}} <span>{{eleMessage.date}}</span>
                 </div>
             </div>
     

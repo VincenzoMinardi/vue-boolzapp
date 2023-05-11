@@ -3,7 +3,7 @@ const boolZapp = Vue.createApp({
         return {
 
             activeIndex: 0,
-            currentContact: 0,
+            
 
             user: {
                 name: 'Vincenzo',
@@ -182,7 +182,9 @@ const boolZapp = Vue.createApp({
     },
 
 methods: {
-
+   selectUser(index){
+    this.activeIndex = index 
+   }
 },
 
 
