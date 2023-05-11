@@ -6,7 +6,7 @@ const boolZapp = Vue.createApp({
                 name: 'Vincenzo',
                 avatar:'img/avatar_io.jpg',
             },
-
+            
 
             contacts: [
                 {

@@ -5,6 +5,7 @@
 }
 
 body {
+    
     display: grid;
     place-items: center;
     height: 100vh;
@@ -24,7 +25,7 @@ body {
 
 .bar-user{
     
-    height: 95vh;
+    height: 100%;
     width: 30%;
     background-color: white;
 }
@@ -32,12 +33,13 @@ body {
 
 .bar-chat{
     background-image: url(../img/mine.jpg);
-    height: 95vh;
+    height: 80%;
     width: 70%;
 }
 
 .bar-text{
-    height: 100%;
+   display: flex;
+   flex-direction: column;
     
 }
  
@@ -48,27 +50,27 @@ body {
     width: 800px;
     height: 40px;
     margin-left: 1rem;
-    margin-bottom: 4.5rem;
+    
 }
 
 .emoticon{
     
     font-size: 1.5rem;
     margin-left: 1.5rem;
-    margin-bottom: 4.6rem;
+   
  
 }
 
 .color-bar-text{
-    display: flex;
-    align-items: end;
-    height: 60px;
-    height: 100%;
+  display: flex;
+ 
+  
+    
 }
 .emoticon-2{
    font-size: 1.5rem;
    margin-left: 1rem;
-   margin-bottom: 4.6rem;
+   
     
 }
 
@@ -110,7 +112,7 @@ body {
    
     height: 70px;
     width: 100%;
-    background-color: aqua;
+    background-color:rgb(142, 218, 252);
 }
 
 .icon-bell{
@@ -149,4 +151,35 @@ input{
     font-size: 1rem;
     position: relative;
     bottom: 35px;
+}
+
+.messages{
+    display: flex;
+    justify-content: space-around;
+}
+
+.ms-utent{
+    height: 50px;
+    width: 250px;
+    background-color: white;
+    margin-top: 20rem;
+    border-radius: 1rem;
+   
+}
+
+.ms-user{
+    background-color: rgb(213, 249, 186);
+    height: 50px;
+    width: 250px;
+    margin-top: 3rem;
+    border-radius: 1rem;
+}
+
+
+.ms-user1{
+    background-color: rgb(213, 249, 186);
+    height: 50px;
+    width: 250px;
+    margin-top: 10rem;
+    border-radius: 1rem;
 }
