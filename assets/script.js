@@ -2,6 +2,8 @@ const boolZapp = Vue.createApp({
     data(){
         return {
 
+            activeIndex: 0,
+
             user: {
                 name: 'Vincenzo',
                 avatar:'img/avatar_io.jpg',
@@ -37,9 +39,9 @@ const boolZapp = Vue.createApp({
                     visible: true,
                     messages: [
                         {
-                            date: '20/03/2020 16:30:00',
-                            message: 'Ciao come stai?',
-                            status: 'sent'
+                           id: 1,  date: '20/03/2020 16:30:00',
+                           id: 2,  message: 'Ciao come stai?',
+                           id: 3, status: 'sent'
                         },
                         {
                             date: '20/03/2020 16:30:55',

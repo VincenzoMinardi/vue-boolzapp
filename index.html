@@ -38,58 +38,50 @@
                 <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat">
             </div>
             <div class="scroll">
-                <div class="chat_users" v-for="(contact, index) in contacts" :key="index">
+                <div class="chat_users" v-for="(element, index) in contacts" :key="index">
                     <div class="img_avatar">
-                        <img :src="contact.avatar" alt="">
+                        <img :src="element.avatar" alt="">
                         <div class="txt_avatar">
-                            <div class="name">{{ contact.name }}</div>
-                            <div class="last_msg">{{contact.messages[contact.messages.length - 1].message }}</div>   
+                            <div class="name">{{ element.name }}</div>
+                            <div class="last_msg">{{element.messages[element.messages.length - 1].message }}</div>
                         </div>
-                        <div class="date">{{ contact.messages[contact.messages.length - 1].date }}</div>
+                        <div class="date">{{ element.messages[element.messages.length - 1].date }}</div>
                     </div>
                 </div>
             </div>
         </div>
-
+    
         <div class="chat_bar">
             <div class="chat_head"></div>
             <div class="msg">
                 <div class="chat white">
                     <div class="chat_text">
-                        !!!!
                         <div class="chat_date">
-                         10/01/2020 15:30:55
+                           
+                            10/01/2020 15:30:55
                         </div>
-                     </div>
+                    </div>
                 </div>
-                <div class="chat green">
+                <div v-for="element in contacts[0].messages" class="chat green">
                     <div class="chat_text">
-                        !!!!
+                        {{element.message}}
                         <div class="chat_date">
-                         10/01/2020 15:30:55
+                            10/01/2020 15:30:55
                         </div>
-                     </div>
+                    </div>
                 </div>
             </div>
-            
+    
             <div class="controls">
                 <i class="fa-regular fa-face-smile"></i>
                 <input class="type_msg" type="text" placeholder="Invia nuovo Messaggio">
                 <i class="fa-solid fa-microphone"></i>
             </div>
         </div>
-        
-
+    
+    
     </div>
-
-</body>
-</html>
-
-
-
-
-
-
-
-
-
+    
+    </body>
+    
+    </html>-
