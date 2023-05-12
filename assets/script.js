@@ -179,13 +179,8 @@ const boolZapp = Vue.createApp({
             newMessage: '',
             searchText: '',
         }
-       
-
-
-
-
     },
-
+    
     methods: {
 
         selectUser(index) {
@@ -218,9 +213,7 @@ const boolZapp = Vue.createApp({
 
     },
 
-    computed:{
-
-    }
+    
 
 });
 
