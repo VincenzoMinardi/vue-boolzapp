@@ -188,14 +188,14 @@ const boolZapp = Vue.createApp({
         },
 
 
-        addMessage(newMsg) {
+        addMessage(newMsg, index) {
             let newMex = {
                 date: '10/01/2020 15:51:00',
                 message: newMsg,
                 status: 'sent',
             };
 
-            this.contacts[this.activeIndex].messages.push(newMex)
+            this.contacts[index].messages.push(newMex)
 
             setTimeout(() => {
                 this.contacts[this.activeIndex].messages.push({
