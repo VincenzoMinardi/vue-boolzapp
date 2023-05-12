@@ -44,7 +44,8 @@
                     placeholder="Cerca o inizia una nuova chat">
             </div>
             <div class="scroll">
-                <div @click="selectUser(index)" class="chat_users" v-for="(element, index) in contacts" :key="index">
+                <div @click="selectUser(index)" class="chat_users" v-for="(element, index) in filterContact"
+                    :key="index">
                     <div class="img_avatar">
                         <img :src="element.avatar" alt="">
                         <div class="txt_avatar">

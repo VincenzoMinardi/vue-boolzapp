@@ -2,7 +2,7 @@ const boolZapp = Vue.createApp({
     data() {
         return {
 
-           
+
 
 
             user: {
@@ -173,14 +173,14 @@ const boolZapp = Vue.createApp({
                         }
                     ],
                 }
-            ],            
-            
+            ],
+
             activeIndex: 0,
             newMessage: '',
             searchText: '',
         }
     },
-    
+
     methods: {
 
         selectUser(index) {
@@ -206,15 +206,17 @@ const boolZapp = Vue.createApp({
             }, 2000)
         },
 
-       
-
-
-
 
     },
 
-    
+    computed: {
+        filterContact() {
+            return this.contacts.filter((contacts) => {
+                return contacts.name.toLowerCase().includes(this.searchText.toLowerCase());
 
+            })
+        },
+    },
 });
 
 boolZapp.mount('#app')
