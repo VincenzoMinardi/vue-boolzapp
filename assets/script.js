@@ -2,8 +2,7 @@ const boolZapp = Vue.createApp({
     data() {
         return {
 
-            activeIndex: 0,
-            newMessage: '',
+           
 
 
             user: {
@@ -174,8 +173,13 @@ const boolZapp = Vue.createApp({
                         }
                     ],
                 }
-            ]
+            ],            
+            
+            activeIndex: 0,
+            newMessage: '',
+            searchText: '',
         }
+       
 
 
 
@@ -187,30 +191,36 @@ const boolZapp = Vue.createApp({
         selectUser(index) {
             this.activeIndex = index
         },
-   
 
-    addMessage(newMsg) {
-        let newMex = {
-            date: '10/01/2020 15:51:00',
-            message: newMsg,
-            status: 'sent',
-        };
-        
-        this.contacts[this.activeIndex].messages.push(newMex)
 
-        setTimeout(() => {
-            this.contacts[this.activeIndex].messages.push({
+        addMessage(newMsg) {
+            let newMex = {
                 date: '10/01/2020 15:51:00',
-                message: 'Okay',
-                status: 'received'
-            })
-        }, 2000)
+                message: newMsg,
+                status: 'sent',
+            };
 
-        
+            this.contacts[this.activeIndex].messages.push(newMex)
+
+            setTimeout(() => {
+                this.contacts[this.activeIndex].messages.push({
+                    date: '10/01/2020 15:51:00',
+                    message: 'Okay',
+                    status: 'received'
+                })
+            }, 2000)
+        },
+
+       
+
+
+
+
+    },
+
+    computed:{
 
     }
-
- },
 
 });
 
