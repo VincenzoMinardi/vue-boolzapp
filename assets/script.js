@@ -1,15 +1,16 @@
 const boolZapp = Vue.createApp({
-    data(){
+    data() {
         return {
 
             activeIndex: 0,
-            
+            newMessage: '',
+
 
             user: {
                 name: 'Vincenzo',
-                avatar:'img/avatar_io.jpg',
+                avatar: 'img/avatar_io.jpg',
             },
-            
+
 
             contacts: [
                 {
@@ -40,9 +41,9 @@ const boolZapp = Vue.createApp({
                     visible: true,
                     messages: [
                         {
-                           id: 1,  date: '20/03/2020 16:30:00',
-                           id: 2,  message: 'Ciao come stai?',
-                           id: 3, status: 'sent'
+                            id: 1, date: '20/03/2020 16:30:00',
+                            id: 2, message: 'Ciao come stai?',
+                            id: 3, status: 'sent'
                         },
                         {
                             date: '20/03/2020 16:30:55',
@@ -176,18 +177,40 @@ const boolZapp = Vue.createApp({
             ]
         }
 
-        
-        
-        
+
+
+
     },
 
-methods: {
-   selectUser(index){
-    this.activeIndex = index 
-   }
-},
+    methods: {
 
+        selectUser(index) {
+            this.activeIndex = index
+        },
+   
 
+    addMessage(newMsg) {
+        let newMex = {
+            date: '10/01/2020 15:51:00',
+            message: newMsg,
+            status: 'sent',
+        };
+        
+        this.contacts[this.activeIndex].messages.push(newMex)
+
+        setTimeout(() => {
+            this.contacts[this.activeIndex].messages.push({
+                date: '10/01/2020 15:51:00',
+                message: 'Okay',
+                status: 'received'
+            })
+        }, 2000)
+
+        
+
+    }
+
+ },
 
 });
 

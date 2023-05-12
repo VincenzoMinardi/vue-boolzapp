@@ -70,6 +70,10 @@ body {
     padding-left: 2rem;
 }
 
+.font{
+    font-size: 1rem;
+}
+
 .bell {
     padding-left: 1rem;
 }
@@ -194,8 +198,8 @@ body {
 }
 
 .chat.sent{
-    align-self: flex-start;
-    background-color: white;
+    align-self: flex-end;
+    background-color: rgb(213, 249, 186);
     padding: 2rem;
     width: 250px;
     height: 105px;
@@ -203,8 +207,8 @@ body {
 }
 
 .chat.received{
-    align-self: flex-end;
-   background-color: rgb(213, 249, 186);
+    align-self: flex-start;
+   background-color: white;
     padding: 2rem;
     width: 250px;
     height: 105px;

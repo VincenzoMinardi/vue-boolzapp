@@ -29,13 +29,17 @@
                     <i class="bi bi-bell-slash"></i>
                 </div>
                 <div class="txt">
-                    <p>Ricevi notifiche di nuovi messaggi</p>
-                    <a href="">Attiva notifiche desktop</a>
+                    <p class="font">Ricevi notifiche di nuovi messaggi</p>
+                    <a class="font" href="">Attiva notifiche desktop</a>
                 </div>
             </div>
             <div class="input-group">
                 <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
-                <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat">
+                <input v-for="element in contacts"
+                
+                type="text" 
+                class="form-control" 
+                placeholder="Cerca o inizia una nuova chat">
             </div>
             <div class="scroll">
                 <div @click="selectUser(index)" class="chat_users" v-for="(element, index) in contacts" :key="index">
@@ -73,13 +77,18 @@
                 :key="eleMessage.date"
                 :class="eleMessage.status == 'sent' ? 'sent' : 'received'"
                 >
-                {{eleMessage.message}} <span>{{eleMessage.date}}</span>
+                <span>{{eleMessage.message}}</span> 
+                <div>{{eleMessage.date}}</div>
                 </div>
             </div>
     
             <div class="controls">
                 <i class="fa-regular fa-face-smile"></i>
-                <input class="type_msg" type="text" placeholder="Invia nuovo Messaggio">
+                <input @keyup.enter="addMessage(newMessage)"
+                class="type_msg" 
+                type="text" 
+                placeholder="Invia nuovo Messaggio"
+                v-model="newMessage" >
                 <i class="fa-solid fa-microphone"></i>
             </div>
         </div>
@@ -89,4 +98,4 @@
     
     </body>
     
-    </html>-
+    </html>
