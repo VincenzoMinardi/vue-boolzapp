@@ -1,7 +1,4 @@
-{
-  createApp;
-}
-({
+const app = Vue.createApp({
   data() {
     return {
       user: {
@@ -175,13 +172,11 @@
           ],
         },
       ],
-
       activeIndex: 0,
       newMessage: "",
       searchText: "",
     };
   },
-
   methods: {
     selectUser(index) {
       this.activeIndex = index;
@@ -205,7 +200,6 @@
       }, 2000);
     },
   },
-
   computed: {
     filterContact() {
       return this.contacts.filter(contacts => {
@@ -217,4 +211,4 @@
   },
 });
 
-boolZapp.mount("#app");
+app.mount("#app");
